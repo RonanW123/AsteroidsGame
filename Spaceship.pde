@@ -20,7 +20,7 @@ class Spaceship extends Floater
     if(myXspeed > 0)
       myXspeed *= 0.99;
     if(myXspeed < 0)
-      myXspeed *=0.99;
+      myXspeed *= 0.99;
     if(myYspeed > 0)
       myYspeed *= 0.99;
     if(myYspeed < 0)
