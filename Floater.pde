@@ -21,7 +21,7 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
   {     
     //rotates the floater by a given number of degrees    
     myPointDirection+=degreesOfRotation;  
-    //I know that it says to not edit this class, but I made it so that the PointDirection resets to 0 if it goes beyond |360|
+    //I know that it says to not edit this class, but I made it so that the PointDirection resets to 0 if it goes beyond |+/-360|
     if(myPointDirection < -360)
       myPointDirection = 0;
     if(myPointDirection > 360)
