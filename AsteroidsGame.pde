@@ -23,13 +23,6 @@ public void draw()
     Galaxy[i].show();
   }
 
-  for(int i = 0; i < asteroids.size(); i++){
-    asteroids.get(i).show();
-    asteroids.get(i).move();
-    if(dist((float)asteroids.get(i).getCenterX(), (float)asteroids.get(i).getCenterY(), (float)X.getCenterX(), (float)X.getCenterY()) < 15)
-      asteroids.remove(asteroids.get(i));
-  }
-
   X.show();
   X.move();
   X.speedControl();
@@ -46,6 +39,13 @@ public void draw()
   text("myCenterX: " + Math.round(X.getCenterX()), 25, 75);
   text("myCenterY: " + Math.round(X.getCenterY()), 25, 100);
   text("myPointDirection: " + Math.round(X.getPointDirection()), 25, 125);
+
+  for(int i = 0; i < asteroids.size(); i++){
+    asteroids.get(i).show();
+    asteroids.get(i).move();
+    if(dist((float)asteroids.get(i).getCenterX(), (float)asteroids.get(i).getCenterY(), (float)X.getCenterX(), (float)X.getCenterY()) < 15)
+      asteroids.remove(asteroids.get(i));
+  }
 }
 
 public void keyPressed(){
