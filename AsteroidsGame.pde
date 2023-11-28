@@ -1,5 +1,6 @@
 Spaceship X = new Spaceship();
 Star[] Galaxy = new Star[500];
+ArrayList <Asteroid> asteroids = new ArrayList <Asteroid>();
 boolean w, a, d;
 
 public void setup() 
@@ -10,6 +11,9 @@ public void setup()
     Galaxy[i] = new Star();
     Galaxy[i].show();
   }
+
+  for(int i = 0; i < 5; i++)
+    asteroids.add(new Asteroid());
 }
 public void draw() 
 {
@@ -18,7 +22,14 @@ public void draw()
     Galaxy[i].twinkle();
     Galaxy[i].show();
   }
-  
+
+  for(int i = 0; i < asteroids.size(); i++){
+    asteroids.get(i).show();
+    asteroids.get(i).move();
+    if(dist((float)asteroids.get(i).getCenterX(), (float)asteroids.get(i).getCenterY(), (float)X.getCenterX(), (float)X.getCenterY()) < 15)
+      asteroids.remove(asteroids.get(i));
+  }
+
   X.show();
   X.move();
   X.speedControl();
