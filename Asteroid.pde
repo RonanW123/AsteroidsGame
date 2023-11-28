@@ -60,7 +60,7 @@ class Asteroid extends Floater
     float dRadians = (float)(myPointDirection*(Math.PI/180));
     rotate(dRadians);
     beginShape();
-    for (int nI = 0; nI < corners; nI++)  {
+    for(int nI = 0; nI < corners; nI++){
       vertex(xCorners[nI], yCorners[nI]);
     }
     endShape(CLOSE);
