@@ -39,6 +39,7 @@ public void draw()
   text("myCenterX: " + Math.round(X.getCenterX()), 25, 75);
   text("myCenterY: " + Math.round(X.getCenterY()), 25, 100);
   text("myPointDirection: " + Math.round(X.getPointDirection()), 25, 125);
+  text("Asteroids Left: " + asteroids.size(), 25, 150);
 
   for(int i = 0; i < asteroids.size(); i++){
     asteroids.get(i).show();
