@@ -44,7 +44,7 @@ public void draw()
   for(int i = 0; i < asteroids.size(); i++){
     asteroids.get(i).show();
     asteroids.get(i).move();
-    if(dist((float)asteroids.get(i).getCenterX(), (float)asteroids.get(i).getCenterY(), (float)X.getCenterX(), (float)X.getCenterY()) < 15)
+    if(dist((float)asteroids.get(i).getCenterX(), (float)asteroids.get(i).getCenterY(), (float)X.getCenterX(), (float)X.getCenterY()) < 20)
       asteroids.remove(asteroids.get(i));
   }
 }
