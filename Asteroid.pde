@@ -6,33 +6,33 @@ class Asteroid extends Floater
     ArrayList <Integer> xCorner = new ArrayList <Integer>();
     ArrayList <Integer> yCorner = new ArrayList <Integer>();
     for(int i = 0; i < corners; i++){
-      xCorner.add((int)(Math.random()*6)+10);
-      yCorner.add((int)(Math.random()*6)+10);
+      xCorner.add((int)(Math.random()*11)+20);
+      yCorner.add((int)(Math.random()*11)+20);
     }
     for(int i = 1; i < corners; i++){
-      xCorner.set(i, (int)(Math.random()*6)-15);
-      yCorner.set(i, (int)(Math.random()*6)+10);
+      xCorner.set(i, (int)(Math.random()*11)-25);
+      yCorner.set(i, (int)(Math.random()*11)+20);
     }
     for(int i = 2; i < corners; i++){
-      xCorner.set(i, (int)(Math.random()*6)-15);
-      yCorner.set(i, (int)(Math.random()*6)-15);
+      xCorner.set(i, (int)(Math.random()*11)-25);
+      yCorner.set(i, (int)(Math.random()*11)-25);
     }
     for(int i = 3; i < corners; i++){
-      xCorner.set(i, (int)(Math.random()*6)+10);
-      yCorner.set(i, (int)(Math.random()*6)-15);
+      xCorner.set(i, (int)(Math.random()*11)+20);
+      yCorner.set(i, (int)(Math.random()*11)-25);
     }
     for(int i = 4; i < corners; i++){
-      xCorner.set(i, (int)(Math.random()*6)+15);
+      xCorner.set(i, (int)(Math.random()*11)+25);
       yCorner.set(i, 0);
     }
     for(int i = 5; i < corners; i++){
-      xCorner.set(3, (int)(Math.random()*6)-15);
-      yCorner.set(3, (int)(Math.random()*6)-15);
-      xCorner.set(4, (int)(Math.random()*6)+10);
-      yCorner.set(4, (int)(Math.random()*6)-15);
-      xCorner.set(5, (int)(Math.random()*6)+15);
+      xCorner.set(3, (int)(Math.random()*11)-25);
+      yCorner.set(3, (int)(Math.random()*11)-25);
+      xCorner.set(4, (int)(Math.random()*11)+20);
+      yCorner.set(4, (int)(Math.random()*11)-25);
+      xCorner.set(5, (int)(Math.random()*11)+25);
       yCorner.set(5, 0);
-      xCorner.set(2, (int)(Math.random()*6)-20);
+      xCorner.set(2, (int)(Math.random()*11)-30);
       yCorner.set(2, 0);
     }
     xCorners = new int[corners];
@@ -72,5 +72,11 @@ class Asteroid extends Floater
   }
   public double getCenterY(){
      return myCenterY;
+  }
+  public void setXspeed(int x){
+    myXspeed = x;
+  }
+  public void setYspeed(int x){
+    myYspeed = x;
   }
 }
