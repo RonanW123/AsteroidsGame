@@ -49,7 +49,7 @@ public void draw()
   for(int i = 0; i < asteroids.size(); i++){
     asteroids.get(i).show();
     asteroids.get(i).move();
-    if(dist((float)asteroids.get(i).getCenterX(), (float)asteroids.get(i).getCenterY(), (float)X.getCenterX(), (float)X.getCenterY()) < 25){
+    if(dist((float)asteroids.get(i).getCenterX(), (float)asteroids.get(i).getCenterY(), (float)X.getCenterX(), (float)X.getCenterY()) < 30){
       asteroids.remove(asteroids.get(i));
       hp--; 
     }
@@ -59,7 +59,7 @@ public void draw()
     bullets.get(i).show();
     bullets.get(i).move();
     for(int x = 0; x < asteroids.size(); x++)
-      if(dist((float)asteroids.get(x).getCenterX(), (float)asteroids.get(x).getCenterY(), (float)bullets.get(i).getCenterX(), (float)bullets.get(i).getCenterY()) < 25){
+      if(dist((float)asteroids.get(x).getCenterX(), (float)asteroids.get(x).getCenterY(), (float)bullets.get(i).getCenterX(), (float)bullets.get(i).getCenterY()) < 30){
         asteroids.remove(asteroids.get(x));
         bullets.remove(bullets.get(i));
         break;
